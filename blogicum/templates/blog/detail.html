@@ -4,13 +4,13 @@
 {% block content %}
   <article>
     <ul>
-      <li>Место: {{ posts.location }}</li>
-      <li>Дата: {{ posts.date }}</li>
+      <li>Место: {{ post.location }}</li>
+      <li>Дата: {{ post.date }}</li>
       <li>
         Категория:
-        <a href="{% url 'blog:category_posts' posts.category %}">{{ posts.category }}</a>
+        <a href="{% url 'blog:category_posts' post.category %}">{{ posts.category }}</a>
       </li>
     </ul>
-    <p>{{ posts.text|linebreaks }}</p>
+    <p>{{ post.text|linebreaks }}</p>
   </article>
 {% endblock %}
