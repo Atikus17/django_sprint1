@@ -2,6 +2,7 @@
 {% block title %}{% endblock %}
 
 {% block content %}
+<<<<<<< HEAD
   <article>
     <ul>
       <li>Место: {{ post.location }}</li>
@@ -13,4 +14,27 @@
     </ul>
     <p>{{ post.text|linebreaks }}</p>
   </article>
+=======
+<div class="container py-5">
+    <article>
+      <ul>
+        <li>
+            Место: {{ post.location }}              
+        </li>
+        <li>
+            Дата: {{ post.date }}
+        </li>
+        <li>
+            Категория:
+            <a href="{% url 'blog:category_posts' post.category %}">
+             {{ post.category }}
+            </a>
+        </li>
+      </ul>         
+      <p>
+        {{ post.text|linebreaks }}
+      </p>        
+    </article>                
+  </div>
+>>>>>>> 735c55d37ac6e62cdfacc8f065c6d785dbf74fcf
 {% endblock %}
